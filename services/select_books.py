@@ -16,12 +16,8 @@ def fetch_all_books():
         cur.execute(select_query)
         rows = cur.fetchall()
         
-        for row in rows:
-            print(f"Id : {row[0]} , Title : {row[1]} , Author : {row[2]} , Available :{row[3]}")
+        return rows
             
     except Exception as e:
         print("some error occured in the select_books" ,e)
     
-        
-        
-fetch_all_books()
